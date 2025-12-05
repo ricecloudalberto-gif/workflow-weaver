@@ -5,12 +5,14 @@ import { Dashboard } from "@/pages/Dashboard";
 import { Integrations } from "@/pages/Integrations";
 import { Workflows } from "@/pages/Workflows";
 import { Executions } from "@/pages/Executions";
+import { Designer } from "@/pages/Designer";
 
 const pageConfig: Record<string, { title: string; subtitle: string }> = {
   "/": { title: "Dashboard", subtitle: "Overview of your automation platform" },
   "/integrations": { title: "Integrations", subtitle: "Connect your favorite apps" },
   "/workflows": { title: "Workflows", subtitle: "Manage your automation scenarios" },
   "/executions": { title: "Executions", subtitle: "Monitor workflow runs" },
+  "/designer": { title: "Designer", subtitle: "Create diagrams and visual designs" },
   "/analytics": { title: "Analytics", subtitle: "Insights and reports" },
   "/team": { title: "Team", subtitle: "Manage team members" },
   "/api": { title: "API", subtitle: "Developer resources" },
@@ -31,6 +33,8 @@ const Index = () => {
         return <Workflows />;
       case "/executions":
         return <Executions />;
+      case "/designer":
+        return <Designer />;
       default:
         return (
           <div className="p-6 flex items-center justify-center min-h-[60vh]">

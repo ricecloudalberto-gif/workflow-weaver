@@ -13,6 +13,7 @@ import {
   BarChart3,
   Users,
   Bell,
+  PenTool,
 } from "lucide-react";
 import { Tooltip, TooltipContent, TooltipTrigger } from "@/components/ui/tooltip";
 
@@ -28,6 +29,7 @@ const mainNav: NavItem[] = [
   { icon: Plug, label: "Integrations", href: "/integrations" },
   { icon: Workflow, label: "Workflows", href: "/workflows" },
   { icon: Play, label: "Executions", href: "/executions" },
+  { icon: PenTool, label: "Designer", href: "/designer" },
   { icon: BarChart3, label: "Analytics", href: "/analytics" },
 ];
 
