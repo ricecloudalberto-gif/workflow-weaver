@@ -6,19 +6,24 @@ import { Integrations } from "@/pages/Integrations";
 import { Workflows } from "@/pages/Workflows";
 import { Executions } from "@/pages/Executions";
 import { Designer } from "@/pages/Designer";
+import { Team } from "@/pages/Team";
+import { Analytics } from "@/pages/Analytics";
+import { Api } from "@/pages/Api";
+import { Pricing } from "@/pages/Pricing";
 import Settings from "@/pages/Settings";
 
 const pageConfig: Record<string, { title: string; subtitle: string }> = {
-  "/": { title: "Dashboard", subtitle: "Overview of your automation platform" },
-  "/integrations": { title: "Integrations", subtitle: "Connect your favorite apps" },
-  "/workflows": { title: "Workflows", subtitle: "Manage your automation scenarios" },
-  "/executions": { title: "Executions", subtitle: "Monitor workflow runs" },
-  "/designer": { title: "Designer", subtitle: "Create diagrams and visual designs" },
-  "/analytics": { title: "Analytics", subtitle: "Insights and reports" },
-  "/team": { title: "Team", subtitle: "Manage team members" },
-  "/api": { title: "API", subtitle: "Developer resources" },
-  "/settings": { title: "Settings", subtitle: "Configure your workspace" },
-  "/help": { title: "Help", subtitle: "Documentation and support" },
+  "/": { title: "Aperçu", subtitle: "Vue d'ensemble de votre plateforme" },
+  "/integrations": { title: "Intégrations", subtitle: "Connectez vos applications" },
+  "/workflows": { title: "Workflows", subtitle: "Gérez vos automatisations" },
+  "/executions": { title: "Exécutions", subtitle: "Suivez les exécutions" },
+  "/designer": { title: "Designer", subtitle: "Créez des diagrammes" },
+  "/analytics": { title: "Analytique", subtitle: "Rapports et statistiques" },
+  "/team": { title: "Équipe", subtitle: "Gérez votre équipe" },
+  "/api": { title: "API", subtitle: "Documentation développeur" },
+  "/pricing": { title: "Abonnement", subtitle: "Gérez votre abonnement" },
+  "/settings": { title: "Paramètres", subtitle: "Configuration du compte" },
+  "/help": { title: "Aide", subtitle: "Documentation et support" },
 };
 
 const Index = () => {
@@ -36,6 +41,14 @@ const Index = () => {
         return <Executions />;
       case "/designer":
         return <Designer />;
+      case "/team":
+        return <Team />;
+      case "/analytics":
+        return <Analytics />;
+      case "/api":
+        return <Api />;
+      case "/pricing":
+        return <Pricing />;
       case "/settings":
         return <Settings />;
       default:
@@ -45,7 +58,7 @@ const Index = () => {
               <h2 className="text-2xl font-bold text-foreground mb-2">
                 {pageConfig[currentPage]?.title || "Page"}
               </h2>
-              <p className="text-muted-foreground">Coming soon...</p>
+              <p className="text-muted-foreground">Bientôt disponible...</p>
             </div>
           </div>
         );
