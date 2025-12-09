@@ -6,6 +6,7 @@ import { Integrations } from "@/pages/Integrations";
 import { Workflows } from "@/pages/Workflows";
 import { Executions } from "@/pages/Executions";
 import { Designer } from "@/pages/Designer";
+import Settings from "@/pages/Settings";
 
 const pageConfig: Record<string, { title: string; subtitle: string }> = {
   "/": { title: "Dashboard", subtitle: "Overview of your automation platform" },
@@ -35,6 +36,8 @@ const Index = () => {
         return <Executions />;
       case "/designer":
         return <Designer />;
+      case "/settings":
+        return <Settings />;
       default:
         return (
           <div className="p-6 flex items-center justify-center min-h-[60vh]">
